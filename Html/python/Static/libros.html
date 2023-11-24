@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Librería</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2vw;
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-buttons button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5vw;
+            border: none;
+            border-radius: 0.5vw;
+            cursor: pointer;
+            font-size: 0.7vw;
+            margin-right: 0.2vw;
+        }
+
+        .header-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        main {
+            flex: 1;
+            max-width: 95%;
+            margin: 1vw;
+            padding: 2vw;
+            background-color: white;
+            box-shadow: 0 0 2vw rgba(0, 0, 0, 0.1);
+            border-radius: 1vw;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        nav {
+            /* margin-top: 2vw; */
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 1vw;
+            /* border-radius: 1vw; */
+        }
+
+        nav a {
+            flex-grow: 1;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 1vw;
+            border-radius: 0.5vw;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2vw;
+        }
+
+        .book {
+            width: 30%;
+            margin-bottom: 2vw;
+            padding: 1vw;
+            background-color: #f9f9f9;
+            border-radius: 2vw;
+            box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1vw;
+            margin-top: auto; /* Hace que el pie de página esté pegado en la parte inferior */
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Librería</h1>
+        <!-- <div class="header-buttons">
+            <button onclick="window.location.href='inicio_sesion.html'">Iniciar Sesión</button>
+            <button onclick="window.location.href='registro.html'">Registro</button>
+        </div> -->
+    </header>
+
+    <nav>
+        <a href="#">Thriller</a>
+        <a href="#">Fantasía</a>
+        <a href="#">Romance</a>
+        <a href="#">Terror</a>
+        <a href="#">Ciencia Ficción</a>
+        <a href="#">Novela Contemporanea</a>
+        <a href="#">Novela Historica</a>
+        <a href="agregar_libro.html">Añadir Libro</a>
+    </nav>
+
+    <main>
+        <p>Bienvenido a Mi Librería. Aquí encontrarás una gran selección de libros.</p>
+
+        <div class="book-container">
+            <div class="book">
+                <h2>Libro 1</h2>
+                <p>Descripción del Libro 1.</p>
+            </div>
+            <div class="book">
+                <h2>Libro 2</h2>
+                <p>Descripción del Libro 2.</p>
+            </div>
+            <div class="book">
+                <h2>Libro 3</h2>
+                <p>Descripción del Libro 3.</p>
+            </div>
+            <div class="book">
+                <h2>Libro 4</h2>
+                <p>Descripción del Libro 4.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 5</h2>
+                <p>Descripción del Libro 5.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 6</h2>
+                <p>Descripción del Libro 6.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 7</h2>
+                <p>Descripción del Libro 7.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 8</h2>
+                <p>Descripción del Libro 8.</p>
+            </div>            
+            <div class="book">
+                <h2>Libro 9</h2>
+                <p>Descripción del Libro 9.</p>
+            </div>            
+
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="#top">Volver Arriba</a></p>
+        <p>Datos de Contacto: ejemplo@libreria.com | Teléfono: 123-456-7890</p>
+    </footer>
+
+</body>
+</html>
