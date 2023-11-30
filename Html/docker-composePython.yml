@@ -9,6 +9,7 @@ services:
       MARIADB_USER: agente
       MARIADB_USER_PASSWORD: 0traClave
       MARIADB_DATABASE: PEPS
+    userns_mode: keep
     volumes:
       - ./mariadb_data:/var/lib/mysql
   phpmyadmin:
@@ -30,8 +31,8 @@ services:
       DB_DATABASE: PEPS
       DB_HOST: mariadb
       DB_PORT: 3306
-      PORT:8080
-      HOST:0.0.0.0
+      PORT: 8080
+      HOST: 0.0.0.0
     ports:
       - 9094:8080
     depends_on:
