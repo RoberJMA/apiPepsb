@@ -30,9 +30,20 @@ services:
       DB_DATABASE: PEPS
       DB_HOST: mariadb
       DB_PORT: 3306
-      PORT:8080
-      HOST:0.0.0.0
+      PORT: 8080
+      HOST: 0.0.0.0
     ports:
       - 9094:8080
     depends_on:
         - mariadb
+  apache:
+    build: ./apache
+    container_name: apache
+    volumes:
+      - ./python/Static:/var/www/html
+    ports:
+      - "7777:80"
+    restart: unless-stopped
+    depends_on:
+      - mariadb
+      - python
