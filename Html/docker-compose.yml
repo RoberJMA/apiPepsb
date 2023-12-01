@@ -4,7 +4,6 @@ services:
     image: mariadb
     container_name: mariadb
     restart: always
-    userns_mode: keep
     environment:
       MARIADB_ROOT_PASSWORD: example
       MARIADB_USER: agente
