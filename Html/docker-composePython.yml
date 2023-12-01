@@ -40,11 +40,12 @@ services:
   apache:
     build: ./apache
     container_name: apache
+    #userns_mode: keep
     volumes:
-      - ./python/Static:/var/www/html
+       - ./web/static:/usr/local/apache2/htdocs/
     ports:
       - "7777:80"
-    restart: unless-stopped
-    depends_on:
-      - mariadb
-      - python
+    #restart: unless-stopped
+    # depends_on:
+    #   - mariadb
+    #   - python
