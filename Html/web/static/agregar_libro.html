@@ -83,7 +83,7 @@
                 .then(result => {
                     if (result.status == "OK"){
                         alert("Libro guardado")
-                        location.href="/static/libros.html"
+                        location.href="libros.html"
                     } else {
                         alert("El libro no ha podido ser guardado")
                     }
@@ -113,7 +113,7 @@
         <input type="file" id="imagen" name="imagen" accept="image/*" required>
 
         <button type="button" onclick="guardar()" class="button is-success mt-2">Añadir Libro</button>
-        <a href="/static/libros.html" class="button">Volver</a>
+        <a href="libros.html" class="button">Volver</a>
     </div>
 
 </body>

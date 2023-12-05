@@ -77,7 +77,7 @@
                 .catch(error => {
                     console.log('error', error)
                     alert("Ha habido un error al recuperar los datos del libro");
-                    location.href="/static/libros.html";
+                    location.href="libros.html";
                 });
 
         }
@@ -110,7 +110,7 @@
                 .then(result => {
                     if (result.status == "OK"){
                         alert("Libro modificado")
-                        location.href="/static/libros.html"
+                        location.href="libros.html"
                     } else {
                         alert("El libro no ha podido ser modificado")
                     }
@@ -140,7 +140,7 @@
         <input type="file" id="imagen" name="imagen" accept="image/*" required>
 
         <button type="button" onclick="guardar()" class="button is-success mt-2">Confirmar Edicion</button>
-        <a href="/static/libros.html" class="button">Volver</a>
+        <a href="libros.html" class="button">Volver</a>
     </div>
 
 </body>
