@@ -1,10 +1,8 @@
-FROM httpd:2.4.33-alpine
+FROM httpd
 USER root
-#COPY ../web/static /var/www/html
-RUN apk update; \
-    apk upgrade;
-#RUN rm /var/www/html/index.html
-#  Copy apache vhost file to proxy php requests to php-fpm container
-# COPY demo.apache.conf /usr/local/apache2/conf/demo.apache.conf
-# RUN echo "Include /usr/local/apache2/conf/demo.apache.conf" \
-#      >> /usr/local/apache2/conf/httpd.conf
+RUN apt update; \
+    apt upgrade;
+COPY ./httpd.conf /usr/local/apache2/conf/
+
+# RUN sed -i '/#LoadModule proxy_module/s/^#//g' /usr/local/apache2/conf/httpd.conf
+# RUN sed -i '/#LoadModule proxy_http_module/s/^#//g' /usr/local/apache2/conf/httpd.conf
