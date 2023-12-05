@@ -71,7 +71,7 @@
                 method: 'GET'
             };
 
-            fetch("/libro/"+id, requestOptions)
+            fetch("/api/libro/"+id, requestOptions)
                 .then(response => response.json())
                 .then(result => pintarLibro(result))
                 .catch(error => {
@@ -105,7 +105,7 @@
                 body: datos
             };
 
-            fetch("/libros", requestOptions)
+            fetch("/api/libros", requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     if (result.status == "OK"){

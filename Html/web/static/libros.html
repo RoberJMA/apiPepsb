@@ -192,7 +192,7 @@
                 method: 'GET'
             };
 
-            fetch("/libros", requestOptions)
+            fetch("/api/libros", requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     if (result.status){
@@ -211,7 +211,7 @@
                 method: 'DELETE'
             };
 
-            fetch("/libros/"+id, requestOptions)
+            fetch("/api/libros/"+id, requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     if (result.status == "OK"){
@@ -230,7 +230,7 @@
             var requestOptions = {
                 method: 'GET'
             };
-            fetch("/logout", requestOptions)
+            fetch("/api/logout", requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     if (result.status == "OK"){

@@ -74,9 +74,10 @@
                 body: raw
             };
 
-            fetch("/registro", requestOptions)
+            fetch("/api/registro", requestOptions)
                 .then(response => response.json())
                 .then(result => {
+                    
                     if (result.status=="OK"){
                         alert("Usuario registrado correctamente");
                         location.href="index.html";
@@ -106,6 +107,6 @@
 
         <label class="error">Usuario ya existe</label>
     </div>
-
+</form>
 </body>
 </html>
