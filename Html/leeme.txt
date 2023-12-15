@@ -12,7 +12,7 @@ si se desea arrancar los contenedores de BBDD sólo y lanzar la aplicación pyth
   Ejecuta: python app.py
   Probar la aplicación con: localhost:8080/static/index.html
 
-Si se desea arrancar los contenedores de BBDD y de python hay que:
-  Revisar el archivo web/variables.py y ocultar las líneas 3 a 8
-  Lanzar docker-compose-copia.yaml
-  Probar la aplicación en localhost:9094/static/index.html
+Si se desea arrancar entorno con apache+python+mariadb+phpmyadmin:
+   Antes de lanzar verificar arbol de archivos y permisos de las carpetas, si no son correctos no funcionaran de manera correcta y no se tendran permisos para acceder al html o la comunicacion con la API
+   Se debe lanzar docker-composePython.yml
+   Probar la aplicación en localhost:7777
